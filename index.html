@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HAPPY BIRTHDAY AAYUSHI JI  💖</title>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Roboto', sans-serif;
+      scroll-behavior: smooth;
+    }
+    section {
+      padding: 60px 20px;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      color: white;
+      text-align: center;
+    }
+    h1, h2 {
+      font-family: 'Copperplate', cursive;
+    }
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 10px;
+      z-index: 999;
+    }
+    nav a {
+      color: rgb(246, 244, 245);
+      text-decoration: underline;
+      font-weight: bold;
+    }
+    .home {
+      background: linear-gradient(to right, #fbc2eb, #a6c1ee);
+      font-size: xx-large;
+      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+      font-style: oblique;
+      color: #3d3b3d;
+       border:2px;
+       
+    }
+   
+
+
+    .letter {
+      background: linear-gradient(to right, #f6d365, #fda085);
+      font-size: x-large;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+    .timeline {
+      background: linear-gradient(to right, #84fab0, #8fd3f4);
+      font-size: x-large;
+    }
+    .gallery {
+      background: linear-gradient(to right, #c9ffbf, #ffafbd);
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 50px;
+      justify-content: center;
+    }
+    .gallery img {
+      width: 200px;
+      height: 250px;
+      object-fit: cover;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+      transition: transform 0.3s ease;
+    }
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+    .countdown {
+      background: linear-gradient(to right, #a18cd1, #fbc2eb);
+    }
+    #timer {
+      font-size: 2rem;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="#home">HOME</a>
+    <a href="#letter">LETTER</a>
+    <a href="#timeline">TIMELINE</a>
+    <a href="#gallery">GALLERY</a>
+    <a href="#countdown">COUNTDOWN</a>
+  </nav>
+
+  <section id="home" class="home">
+    <h1 data-aos="fade-up"><b>🎉🎉🎉🎉19th Happiest Birthday Aayushi ji 🎉🎉🎉🎉</b></h1>
+    <p data-aos="fade-up" data-aos-delay="200"><i>click the above buttons to see the surprise 💖</i></p>
+   <video>
+    source <img src="video.1.png" alt="">
+   </video>
+  </section>
+
+  <section id="letter" class="letter">
+    <h2 data-aos="fade-up">DEAR AAYUSHI JI</h2>
+    <p data-aos="fade-up" data-aos-delay="200">
+      From the day we met, you've brought nothing but joy and light into my life.<br>
+      On your special day, I just want to say how much you mean to me.<br>
+      You're my sunshine, my best friend, my everything. I love you endlessly. 💕
+    </p>
+  </section>
+
+  <section id="timeline" class="timeline">
+    <h2 data-aos="fade-up">Our Journey Together</h2>
+    <ul data-aos="fade-up" data-aos-delay="200">
+      <li>💖 1st Jan 2023 - We met for the first time</li>
+      <li>🌹 14th Feb 2023 - Our first Valentine</li>
+      <li>📸 10th June 2023 - Our first trip together</li>
+      <li>🎂 24th June 2025 - Your beautiful 19th birthday</li>
+    </ul>
+  </section>
+
+  <section id="gallery" class="gallery">
+    <img src="photo13.jpg" data-aos="fade-up">
+    <img src="photo13.jpg" data-aos="fade-up" data-aos-delay="100">
+    <img src="photo13.jpg" data-aos="fade-up" data-aos-delay="200">
+    <img src="photo13.jpg" data-aos="fade-up" data-aos-delay="300">
+    <img src="photo13.jpg" data-aos="fade-up" data-aos-delay="400">
+  </section>
+
+  <section id="countdown" class="countdown">
+    <h2 data-aos="fade-up">Countdown to Your Special Day</h2>
+    <div id="timer" data-aos="fade-up" data-aos-delay="200"></div>
+  </section>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+
+    // Countdown Timer
+    const countdown = () => {
+      const endDate = new Date('June 26, 2025 00:00:00').getTime();
+      const now = new Date().getTime();
+      const distance = endDate - now;
+
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      document.getElementById("timer").innerHTML = 
+        `${days}d ${hours}h ${minutes}m ${seconds}s`;
+
+      if (distance < 0) {
+        document.getElementById("timer").innerHTML = "🎉 It's your birthday! 🎉";
+      }
+    };
+
+    setInterval(countdown, 1000);
+  </script>
+</body>
+</html>
